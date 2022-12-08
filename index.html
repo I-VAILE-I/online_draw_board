@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <link rel="icon" href="http://o6oi.ru/main.php/55409-1/16.jpg" type="image/x-icon">
+	    <meta charset="utf-8">
+	    <title>Онлайн доска</title>
+	   	<!-- <script src="changeColor.js"></script>--> 
+		<script src="changeThickness.js"></script> 
+		<script src="drawingCanvas.js"></script>
+		<script src="isDrawing.js"></script>
+		<script src="stopDrawing.js"></script>
+		<script src="saveCanvas.js"></script>
+		<script src="startDrawing.js"></script>
+		<script src="clearCanvas.js"></script>
+		<!-- <script src="test.js"></script>--> 
+		<script src="gradient.js"></script>	
+		<script src="Lib.js"></script>		
+	    <link rel="stylesheet" href="toolbar.css">
+	</head>
+
+	<body>
+		
+		<div class="picker" id="primary_block" >
+			<div id="line">
+			<div id="arrows">
+				<div class="left_arrow"></div>
+				<div class="right_arrow"></div>
+		</div>
+		</div>
+
+		<div id="block_picker">
+		<img src="bgGradient.png" class="bk_img"><div class="circle" id="circle"></div>
+		</div>
+		<div id="out_color" class="out_color"></div>
+		</div>
+		<script type="text/javascript" src="picker2.js"></script>
+		<script type="text/javascript">
+		picker.init();
+		</script>
+		
+		<div class="Toolbar">
+			- Толщина -<br>
+			<br>
+			<input type="range" id="r1" oninput="fun1()">
+			<input type="text" id="i1">
+			
+			
+		</div>
+		
+		<!--<div class="Toolbar">
+				- Толщина -<br>
+				<img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
+				<img src="http://professorweb.ru/downloads/pen_medium.gif" alt="Нормальная кисть" onclick="changeThickness(5, this)">
+				<img src="http://professorweb.ru/downloads/pen_thick.gif" alt="Толстая кисть" onclick="changeThickness(10, this)"> 
+		</div>-->
+		
+		<div class="CanvasContainer">
+				<canvas id="drawingCanvas" width="1800" height="750"></canvas>
+		</div>
+		
+		<div class="Toolbar">
+				- Операции-<br>
+				<button onclick="saveCanvas()">Сохранить содержимое Canvas</button>
+				<button onclick="clearCanvas()">Очистить Canvas</button>
+				<div id="savedCopyContainer">
+				   <img id="savedImageCopy"><br>
+				   Щелкните правой кнопкой мыши для сохранения ...
+				</div>
+				
+		</div>
+	</body>
+</html>
